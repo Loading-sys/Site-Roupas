@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Produto</title>
+  </head>
+  <body>
+    <div class="header__bar">Frete Grátis em Compras Acima de R$ 100,00.</div>
+    <nav class="section__container nav__container">
+      <a href="index.html" class="nav__logo">Loading</a>
+      <ul class="nav__links">
+        <li class="link"><a href="index.html">HOME</a></li>
+        <li class="link"><a href="estoque.html">ESTOQUE</a></li>
+        <!-- <li class="link"><a href="#">PROMOÇÕES</a></li> -->
+        <li class="link"><a href="rastrear.html">RASTREAR ENCOMENDA</a></li>
+        <li class="link"><a href="encomendas.html">ENCOMENDAS</a></li>
+      </ul>
+      <div class="nav__icons">
+        <span><i class="ri-shield-user-line"></i></span>
+        <span><i class="ri-search-line"></i></span>
+        <span><i class="ri-shopping-bag-2-line"></i></span>
+      </div>
+    </nav>
+
+    <header class="header__produto">
+      <div class="section__container produto__container">
+
+        <!-- <div class="header__image">
+          <img src="assets/header.png" alt="header" />
+        </div> -->
+        <div class="produto__solid">
+          <!-- <img src="assets/musthave-1.png" alt="camiseta"> -->
+          <div class="owl-carousel owl-theme produto__solid">
+            <div class="item"><img src="assets/corteiz1.png" alt="camiseta"></div>
+            <div class="item"><img src="assets/corteiz2.png" alt="camiseta"></div>
+            <div class="item"><img src="assets/corteiz3.png" alt="camiseta"></div>
+            <div class="item"><img src="assets/corteiz4.png" alt="camiseta"></div>
+          </div>
+        </div>
+        <div class="produto__content">
+          <h1>Camiseta Corteiz</h1>
+          <h4 class="produto__vendido">Vendido</h4>
+          <p class="produto__tamanho">Tamanho Disponível: <span>P e M</span></p>
+          <p class="produto__quantidade">Quantidade Disponível: <span>0</span></p>
+          <a class="btn" href="https://wa.me/5561992216510">DISPONÍVEL PARA ENCOMENDA</a>
+        </div>
+      </div>
+    </header>
+
+    <hr />
+
+    <footer class="section__container footer__container">
+      <div class="footer__col">
+        <h4 class="footer__heading">CONTATO</h4>
+        <p>
+          <i class="ri-map-pin-2-fill"></i> 123, London Bridge Street, London
+        </p>
+        <p><i class="ri-mail-fill"></i> support@monsa.com</p>
+        <p><i class="ri-phone-fill"></i> (+012) 3456 789</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">SOBRE</h4>
+        <p>Home</p>
+        <p>Sobre ns</p>
+        <p>Trabalhe com a gente</p>
+        <p>Encomendas</p>
+        <p>Terms & Conditions</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Links</h4>
+        <p>Ajuda</p>
+        <p>Rastreie seu pedido</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Redes Sociais</h4>
+        <p>Instagram</p>
+        <p>Tiktok</p>
+      </div>
+    </footer>
+
+    <hr />
+
+    <div class="section__container footer__bar">
+      <div class="copyright">
+        Copyright © 2023 Web Design Mastery. All rights reserved.
+      </div>
+      <div class="footer__form">
+        <form>
+          <input type="text" placeholder="ENTER YOUR EMAIL" />
+          <button class="btn" type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          items: 1,
+          loop: true,
+          margin: 20,
+          animateOut: 'fadeOut'
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dados para Entrega</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="background">
+      <img src="assets/relogio5.png">
+    </div>
+    <section class="container">
+      <header>Dados para Entrega</header>
+      <form id="myForm" class="form" method="post">
+        <div class="input-box">
+          <label>Nome Completo</label>
+          <input type="text" name="Nome" placeholder="Nome Completo" required />
+        </div>
+
+        <div class="input-box">
+          <label>Email</label>
+          <input type="text" name="Email" placeholder="Email" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Número com DDD</label>
+            <input type="number" name="Numero" placeholder="Número com DDD" required />
+          </div>
+          <div class="input-box">
+            <label>Data de Nascimento</label>
+            <input type="date" placeholder="Enter birth date" required />
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Endereço</label>
+          <input type="number" name="CEP" placeholder="CEP" required />
+          <input type="text" name="Logradouro" placeholder="Logradouro" required />
+          <input type="text" name="Número" placeholder="Número" required />
+          <input type="text" name="Complemento" placeholder="Complemento" required />
+          <input type="text" name="Bairro" placeholder="Bairro" required />
+          <div class="column">
+            <input type="text" name="Cidade" placeholder="Cidade" required />
+            <input type="text" name="Estado" placeholder="Estado" required />
+          </div>
+          <input type="text" name="CPF" placeholder="CPF" required />
+        </div>
+        <div class="gender-box">
+          <h3>Frete</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="Relógio" checked />
+              <label for="check-male">PAC: Frete Grátis</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit">Prosseguir para Pagamento</button>
+      </form>
+    </section>
+
+    <script>
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        // Envia os dados do formulário para a URL desejada
+        fetch('https://api.sheetmonkey.io/form/gCNGFqH14gSxSJAUuwsUWt', {
+          method: 'POST',
+          body: new FormData(this)
+        })
+        .then(response => {
+          if (response.ok) {
+            // Após 2 segundos, redireciona para o YouTube
+            setTimeout(() => {
+              window.location.href = 'prosseguirpagamento250.html';
+            }, 10);
+          } else {
+            console.error('Erro ao enviar o formulário');
+          }
+        })
+        .catch(error => console.error('Erro:', error));
+      });
+    </script>
+  </body>
+</html>
